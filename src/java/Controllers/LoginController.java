@@ -36,10 +36,10 @@ public class LoginController extends HttpServlet {
 
             String stMensaje = "";
             if (request.getParameter("txtEmail1").equals("")) {
-                stMensaje += "Ingrese Email,";
+                stMensaje += "No se ingresó correo, ";
             }
             if (request.getParameter("txtPassword").equals("")) {
-                stMensaje += "Ingrese Password.";
+                stMensaje += "No se ingresó contraseña.";
             }
             if (!stMensaje.equals("")) {
                 throw new Exception(stMensaje);
@@ -55,7 +55,7 @@ public class LoginController extends HttpServlet {
             if (blflag) {
                 request.getRequestDispatcher("Index.jsp").forward(request, response);
             } else {
-                throw new Exception("Email o Password invalido");
+                throw new Exception("Correo o Contraseña invalida");
             }
         } catch (Exception ex) {
             request.setAttribute("stError", ex.getMessage());

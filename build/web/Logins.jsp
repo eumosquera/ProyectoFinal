@@ -36,7 +36,7 @@
         %>
         <input type="text" hidden="" id="txtMensaje" value=" <%=request.getAttribute("stError").toString()%>"/>
         <script>
-            swal("Mensaje", document.getElementById("txtMensaje").value, "error")
+            swal("Alerta", document.getElementById("txtMensaje").value, "error")
         </script>
         <%
             }
