@@ -58,16 +58,15 @@ public final class Logins_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <!-- Custom fonts for this template-->\n");
       out.write("        <link href=\"vendor/font-awesome/css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\">\n");
       out.write("        <!-- Custom styles for this template-->\n");
-      out.write("        <link href=\"css/sb-admin.css\" rel=\"stylesheet\" type=\"txt/css\">\n");
+      out.write("        <link href=\"css/sb-admin.css\" rel=\"stylesheet\" type=\"text/css\">\n");
+      out.write("        <link href=\"css/sweetalert.css\" rel=\"stylesheet\" type=\"text/css\">\n");
       out.write("        <!-- Bootstrap core JavaScript-->\n");
       out.write("        <script src=\"vendor/jquery/jquery.min.js\"></script>\n");
       out.write("        <script src=\"vendor/bootstrap/js/bootstrap.bundle.min.js\"></script>\n");
       out.write("        <!-- Core plugin JavaScript-->\n");
       out.write("        <script src=\"vendor/jquery-easing/jquery.easing.min.js\"></script>\n");
-      out.write("        <script src=\"js/sweetalert.min.js\" type=\"txt/javascript\"/>\n");
+      out.write("        <script src=\"js/sweetalert.min.js\" type=\"text/javascript\"></script>\n");
       out.write("        \n");
-      out.write("            swal(\"Buen trabajo\", \"Se realizo proceso con exito\", \"success\")\n");
-      out.write("        </script>\n");
       out.write("    </head>\n");
       out.write("\n");
       out.write("    <body class=\"bg-dark\">\n");
@@ -76,7 +75,7 @@ public final class Logins_jsp extends org.apache.jasper.runtime.HttpJspBase
             if (request.getAttribute("stError") != null) {
         
       out.write("\n");
-      out.write("        <input type=\"text\" hidden=\"\" name=\" txtMensaje\" value=\" ");
+      out.write("        <input type=\"text\" hidden=\"\" id=\"txtMensaje\" value=\" ");
       out.print(request.getAttribute("stError").toString());
       out.write("\"/>\n");
       out.write("        <script>\n");

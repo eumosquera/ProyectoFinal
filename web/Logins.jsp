@@ -19,23 +19,22 @@
         <!-- Custom fonts for this template-->
         <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <!-- Custom styles for this template-->
-        <link href="css/sb-admin.css" rel="stylesheet" type="txt/css">
+        <link href="css/sb-admin.css" rel="stylesheet" type="text/css">
+        <link href="css/sweetalert.css" rel="stylesheet" type="text/css">
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <!-- Core plugin JavaScript-->
         <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-        <script src="js/sweetalert.min.js" type="txt/javascript"/>
-        <script>
-            swal("Buen trabajo", "Se realizo proceso con exito", "success");
-        </script>
+        <script src="js/sweetalert.min.js" type="text/javascript"></script>
+        
     </head>
 
     <body class="bg-dark">
         <%
             if (request.getAttribute("stError") != null) {
         %>
-        <input type="text" hidden="" name=" txtMensaje" value=" <%=request.getAttribute("stError").toString()%>"/>
+        <input type="text" hidden="" id="txtMensaje" value=" <%=request.getAttribute("stError").toString()%>"/>
         <script>
             swal("Mensaje", document.getElementById("txtMensaje").value, "error")
         </script>

@@ -42,7 +42,7 @@ public class LoginController extends HttpServlet {
                 stMensaje += "Ingrese Password.";
             }
             if (!stMensaje.equals("")) {
-                throw new Exception("stMensaje");
+                throw new Exception(stMensaje);
             }
             Models.clsLogins obclsLogins = new Models.clsLogins();
             obclsLogins.setStEmail(request.getParameter("txtEmail1").toString());
