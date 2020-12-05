@@ -25,13 +25,16 @@
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <!-- Core plugin JavaScript-->
         <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <link href="css/sweetalert.css"rel="stylesheet" type="text/css"/>
+        <script src="js/sweetalert.min.js" type="text/javascript">  </script>
+        
     </head>
     <body>
         <div calss ="container">
             <div class ="card mx-auto mt-5">
-                <div class="card-header">CREAR POSIBLES CLIENTES</div>
+                <div class="card-header" class="align-content-lg-center">CREAR POSIBLES CLIENTES</div>
                 <div class="card-body">
-                    <form>
+                    <form  action="PosiblesClientesController" method="post">
                         <div class ="form-group">
                             <div class = form-row>
                                 <div class="col-md-6">
@@ -50,15 +53,15 @@
                                 <div class = "form-row">
                                     <div class="col-md-3">
                                         <label name="lblEmpresa">Empresa</label>
-                                        <input class="form-control" type="text" name="txtEmpresa" placeholder="Empresa"/>
+                                        <input class="form-control" type="text" name="txtEmpresa" placeholder="Empresa"required=""/>
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblNombre">Nombre</label>
-                                        <input class="form-control" type="text" name="txtNombre" placeholder="Nombre"/>
+                                        <input class="form-control" type="text" name="txtNombre" placeholder="Nombre"required=""/>
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblApellido">Apellido</label>
-                                        <input class="form-control" type="text" name="txtApellido" placeholder="Apellido"/>
+                                        <input class="form-control" type="text" name="txtApellido" placeholder="Apellido"required=""/>
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblTitulo">Titulo</label>
@@ -70,11 +73,11 @@
                                 <div class = "form-row">
                                     <div class="col-md-3">
                                         <label name="lblCorreo">Correo electronico</label>
-                                        <input class="form-control" type="email" name="txtCorreo" placeholder="Correo electronico"/>
+                                        <input class="form-control" type="email" name="txtCorreo" placeholder="Correo electronico"required=""/>
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblTelefono">Telefono</label>
-                                        <input class="form-control" type="number" name="txtTelefono" placeholder="Telefono"/>
+                                        <input class="form-control" type="number" name="txtTelefono" placeholder="Telefono"required=""/>
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblFax">Fax</label>
@@ -95,7 +98,7 @@
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblFuenteCliente">Fuente de posible cliente</label>
-                                        <select class="form-control" name="FuenteClient">
+                                        <select class="form-control" name="FuenteCliente">
                                             <option value="1" > None</option>
                                             <option value="2"> Aviso</option>
                                             <option value="3"> Llamada no solicitada</option>
@@ -106,7 +109,7 @@
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblEstadoCliente">Estado de posible cliente</label>
-                                        <select class="form-control" name="ddlEstadocliente">
+                                        <select class="form-control" name="ddlEstadoCliente">
                                             <option value="1"> None</option>
                                             <option value="2"> Intento de contacto</option>
                                             <option value="3"> Contatactar en el futuro</option>
@@ -131,8 +134,8 @@
                             <div class="form-group">
                                 <div class = "form-row">
                                     <div class="col-md-3">
-                                        <label name="lblCantidadempleados">Cantidad de empleados</label>
-                                        <input class="form-control" type="number" name="txtCantidadempleados" placeholder="Cantidad de empleados"/>
+                                        <label name="lblCantidadEmpleados">Cantidad de empleados</label>
+                                        <input class="form-control" type="number" name="txtCantidadEmpleados" placeholder="Cantidad de empleados"/>
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblIngresoAnual">Ingresos anuales</label>
@@ -169,8 +172,8 @@
                                         <input class="form-control" type="text" name="txtTwitter" placeholder="Twitter"/>
                                     </div>
                                     <div class="col-md-6">
-                                        <label name="lblCorreoSegundo">Correo electronico segundario</label>
-                                        <input class="form-control" type="text" name="txtCorreoSegundo" placeholder="correo electronico segundario"/>
+                                        <label name="lblCorreo2">Correo electronico segundario</label>
+                                        <input class="form-control" type="text" name="txtCorreo2" placeholder="correo electronico segundario"/>
                                     </div>
                                 </div>
                             </div>
