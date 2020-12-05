@@ -20,7 +20,6 @@
         <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <!-- Custom styles for this template-->
         <link href="css/sb-admin.css" rel="stylesheet" type="txt/css">
-        <link href="css/sweetalert.css" rel="stylesheet">
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -28,7 +27,7 @@
         <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
         <script src="js/sweetalert.min.js" type="txt/javascript"/>
         <script>
-            swal("Buen trabajo", "Se realizo proceso con exito", "success")
+            swal("Buen trabajo", "Se realizo proceso con exito", "success");
         </script>
     </head>
 
