@@ -36,10 +36,10 @@ public class LoginController extends HttpServlet {
 
             String stMensaje = "";
             if (request.getParameter("txtEmail1").equals("")) {
-                stMensaje += "No se ingresó correo, ";
+                stMensaje += "No se ingresó correo! ";
             }
             if (request.getParameter("txtPassword").equals("")) {
-                stMensaje += "No se ingresó contraseña.";
+                stMensaje += "No se ingresó contraseña!";
             }
             if (!stMensaje.equals("")) {
                 throw new Exception(stMensaje);

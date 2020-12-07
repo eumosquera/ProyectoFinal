@@ -25,10 +25,19 @@ public class clsPosiblesClientes {
     public int CantidaEmpleado;
     public double dbIngresoAnual;
     public clsCalificacion obcCalificacion;
-    public boolean blNoCorreo;
+    public char chNoCorreo;
     public String stIDSkype;
     public String stTwitter;
     public String stCorreo2;
+    public int inCodigo;
+
+    public int getInCodigo() {
+        return inCodigo;
+    }
+
+    public void setInCodigo(int inCodigo) {
+        this.inCodigo = inCodigo;
+    }
 
     public String getStEmpresa() {
         return StEmpresa;
@@ -150,12 +159,12 @@ public class clsPosiblesClientes {
         this.obcCalificacion = obcCalificacion;
     }
 
-    public boolean isBlNoCorreo() {
-        return blNoCorreo;
+    public char isChNoCorreo() {
+        return chNoCorreo;
     }
 
-    public void setBlNoCorreo(boolean blNoCorreo) {
-        this.blNoCorreo = blNoCorreo;
+    public void setChNoCorreo(char chNoCorreo) {
+        this.chNoCorreo = chNoCorreo;
     }
 
     public String getStIDSkype() {

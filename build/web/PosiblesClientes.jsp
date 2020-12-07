@@ -53,15 +53,15 @@
                                 <div class = "form-row">
                                     <div class="col-md-3">
                                         <label name="lblEmpresa">Empresa</label>
-                                        <input class="form-control" type="text" name="txtEmpresa" placeholder="Empresa"required=""/>
+                                        <input class="form-control" type="text" name="txtEmpresa" placeholder="Empresa"/>
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblNombre">Nombre</label>
-                                        <input class="form-control" type="text" name="txtNombre" placeholder="Nombre"required=""/>
+                                        <input class="form-control" type="text" name="txtNombre" placeholder="Nombre"/>
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblApellido">Apellido</label>
-                                        <input class="form-control" type="text" name="txtApellido" placeholder="Apellido"required=""/>
+                                        <input class="form-control" type="text" name="txtApellido" placeholder="Apellido"/>
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblTitulo">Titulo</label>
@@ -73,11 +73,11 @@
                                 <div class = "form-row">
                                     <div class="col-md-3">
                                         <label name="lblCorreo">Correo electronico</label>
-                                        <input class="form-control" type="email" name="txtCorreo" placeholder="Correo electronico"required=""/>
+                                        <input class="form-control" type="email" name="txtCorreo" placeholder="Correo electronico"/>
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblTelefono">Telefono</label>
-                                        <input class="form-control" type="number" name="txtTelefono" placeholder="Telefono"required=""/>
+                                        <input class="form-control" type="number" name="txtTelefono" placeholder="Telefono"/>
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblFax">Fax</label>
@@ -99,7 +99,7 @@
                                     <div class="col-md-3">
                                         <label name="lblFuenteCliente">Fuente de posible cliente</label>
                                         <select class="form-control" name="FuenteCliente">
-                                            <option value="1" > None</option>
+                                            <option value="1" > Ninguno</option>
                                             <option value="2"> Aviso</option>
                                             <option value="3"> Llamada no solicitada</option>
                                             <option value="4"> Recomendacion de empleado</option>
@@ -110,7 +110,7 @@
                                     <div class="col-md-3">
                                         <label name="lblEstadoCliente">Estado de posible cliente</label>
                                         <select class="form-control" name="ddlEstadoCliente">
-                                            <option value="1"> None</option>
+                                            <option value="1"> Ninguno</option>
                                             <option value="2"> Intento de contacto</option>
                                             <option value="3"> Contatactar en el futuro</option>
                                             <option value="4"> Contactado</option>
@@ -121,7 +121,7 @@
                                     <div class="col-md-3">
                                         <label name="lblSector">Sector</label>
                                         <select class="form-control" name="ddlSector">
-                                            <option value="1"> None</option>
+                                            <option value="1"> Ninguno</option>
                                             <option value="2"> APS (Proveedor de Servicio de Aplicaciones)</option>
                                             <option value="3"> OEM de datos</option>
                                             <option value="4"> ERP (Planificacion de Recursos de Empresa)</option>
@@ -144,11 +144,11 @@
                                     <div class="col-md-3">
                                         <label name="lblCalificacion">Calificacion</label>
                                         <select class="form-control" name="ddlCalificacion">
-                                            <option value="1"> None</option>
+                                            <option value="1"> Ninguno</option>
                                             <option value="2"> Adquirido</option>
                                             <option value="3"> Activo</option>
                                             <option value="4"> Fallo de mercado</option>
-                                            <option value="5"> Proyecto canelado</option>
+                                            <option value="5"> Proyecto cancelado</option>
                                             <option value="6"> Apagar</option>
                                         </select>
                                     </div>

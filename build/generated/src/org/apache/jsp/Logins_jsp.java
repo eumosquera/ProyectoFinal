@@ -79,7 +79,7 @@ public final class Logins_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.print(request.getAttribute("stError").toString());
       out.write("\"/>\n");
       out.write("        <script>\n");
-      out.write("            swal(\"Mensaje\", document.getElementById(\"txtMensaje\").value, \"error\")\n");
+      out.write("            swal(\"Alerta\", document.getElementById(\"txtMensaje\").value, \"error\")\n");
       out.write("        </script>\n");
       out.write("        ");
 
