@@ -159,7 +159,7 @@ public class clsPosiblesClientes {
         this.obcCalificacion = obcCalificacion;
     }
 
-    public char isChNoCorreo() {
+    public char getChNoCorreo() {
         return chNoCorreo;
     }
 

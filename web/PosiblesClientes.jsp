@@ -4,6 +4,7 @@
     Author     : urrutia03
 --%>
 
+<%@page import="org.apache.jasper.tagplugins.jstl.ForEach"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -38,8 +39,8 @@
                 lstclsPosiblesClienteses = (List<Models.clsPosiblesClientes>) session.getAttribute("session_lstclsPosiblesClientes");
             }
 
-            if (request.getAttribute("stMensaje")!=null &&
-                    request.getAttribute("stTipo")!=null){
+            if (request.getAttribute("stMensaje") != null
+                    && request.getAttribute("stTipo") != null) {
         %>
         <input type="text" hidden="" id="txtMensaje"
                value="<%=request.getAttribute("stMensaje")%>"/>
@@ -48,7 +49,7 @@
         <script>
             var mensaje = document.getElementById("txtMensaje").value;
             var tipo = document.getElementById("txtTipo").value;
-            swal("Mensaje", mensaje,tipo);
+            swal("Mensaje", mensaje, tipo);
         </script>
         <%
             }
@@ -200,6 +201,70 @@
                                         <input class="form-control" type="text" name="txtCorreo2" placeholder="correo electronico segundario"/>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <table class="table table-bordered table-info table-responsive">
+                                            <tr>
+                                                <td>Empresa</td>
+                                                <td>Nombre</td>
+                                                <td>Apellido</td>
+                                                <td>Titulo</td>
+                                                <td>Correo electronico</td>
+                                                <td>Telefono</td>
+                                                <td>Fax</td>
+                                                <td>Movil</td>
+                                                <td>Sitio web</td>
+                                                <td>Fuente posible cliente</td>
+                                                <td>Estado posible cliente</td>
+                                                <td>Sector</td>
+                                                <td>Cantidad de empleados</td>
+                                                <td>Ingresos anuales</td>
+                                                <td>Calificacion</td>
+                                                <td>No participacion correo electronico</td>
+                                                <td>ID Skype</td>
+                                                <td>Twitter</td>
+                                                <td>Correo electronico secundario</td>
+                                            </tr>
+                                            <%
+                                                for (Models.clsPosiblesClientes item : lstclsPosiblesClienteses) {
+                                                    Models.clsFuenteCliente obclsFuenteCliente = item.getObclsFuenteCliente();
+                                                    Models.clsEstadoCliente obclsEstadoCliente = item.getObclsEstadoCliente();
+                                                    Models.clsSector obclsSector = item.getObclsSector();
+                                                    Models.clsCalificacion obclsCalificacion = item.getObcCalificacion();
+                                            %>
+                                            <tr>
+                                                <td><%= item.getStEmpresa()%></td>
+                                                <td><%= item.getStNombre()%></td>
+                                                <td><%= item.getStApellido()%></td>
+                                                <td><%= item.getStTitulo()%></td>
+                                                <td><%= item.getStCorreo()%></td>
+                                                <td><%= item.getStTelefono()%></td>
+                                                <td><%= item.getStFax()%></td>
+                                                <td><%= item.getStMovil()%></td>
+                                                <td><%= item.getStSitioWeb()%></td>
+                                                <td><%= obclsFuenteCliente.getStDescripcion()%></td>
+                                                <td><%= obclsEstadoCliente.getStDescripcion()%></td>
+                                                <td><%= obclsSector.getStDescripcion()%></td>
+                                                <td><%= item.getCantidaEmpleado()%></td>
+                                                <td><%= item.getDbIngresoAnual()%></td>
+                                                <td><%= obclsCalificacion.getStDescripcion()%></td>
+                                                <td><%= item.getChNoCorreo()%></td>
+                                                <td><%= item.getStIDSkype()%></td>
+                                                <td><%=item.getStTwitter()%></td>
+                                                <td><%= item.getStCorreo2()%></td>  
+                                            </tr>
+                                            <%
+                                                }
+                                            %>
+
+                                        </table>
+
+                                    </div>
+
+                                </div>
+
                             </div>
                         </div>
                     </form>
