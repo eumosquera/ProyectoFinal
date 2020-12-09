@@ -3,6 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.List;
+import java.util.ArrayList;
 
 public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -44,6 +46,8 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -65,13 +69,14 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("        <!-- Core plugin JavaScript-->\n");
       out.write("        <script src=\"vendor/jquery-easing/jquery.easing.min.js\"></script>\n");
       out.write("        <link href=\"css/sweetalert.css\"rel=\"stylesheet\" type=\"text/css\"/>\n");
-      out.write("        <script src=\"js/sweetalert.min.js\" type=\"text/javascript\">  </script>\n");
-      out.write("        \n");
+      out.write("        <script src=\"js/sweetalert.min.js\" type=\"text/javascript\"></script>\n");
+      out.write("\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
+      out.write("   \n");
       out.write("        <div calss =\"container\">\n");
       out.write("            <div class =\"card mx-auto mt-5\">\n");
-      out.write("                <div class=\"card-header\" class=\"align-content-center\">CREAR POSIBLES CLIENTES</div>\n");
+      out.write("                <div class=\"card-header\" class=\"align-content-lg-center\">CREAR POSIBLES CLIENTES</div>\n");
       out.write("                <div class=\"card-body\">\n");
       out.write("                    <form  action=\"PosiblesClientesController\" method=\"post\">\n");
       out.write("                        <div class =\"form-group\">\n");
@@ -92,15 +97,15 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                <div class = \"form-row\">\n");
       out.write("                                    <div class=\"col-md-3\">\n");
       out.write("                                        <label name=\"lblEmpresa\">Empresa</label>\n");
-      out.write("                                        <input class=\"form-control\" type=\"text\" name=\"txtEmpresa\" placeholder=\"Empresa\"required=\"\"/>\n");
+      out.write("                                        <input class=\"form-control\" type=\"text\" name=\"txtEmpresa\" placeholder=\"Empresa\"/>\n");
       out.write("                                    </div>\n");
       out.write("                                    <div class=\"col-md-3\">\n");
       out.write("                                        <label name=\"lblNombre\">Nombre</label>\n");
-      out.write("                                        <input class=\"form-control\" type=\"text\" name=\"txtNombre\" placeholder=\"Nombre\"required=\"\"/>\n");
+      out.write("                                        <input class=\"form-control\" type=\"text\" name=\"txtNombre\" placeholder=\"Nombre\"/>\n");
       out.write("                                    </div>\n");
       out.write("                                    <div class=\"col-md-3\">\n");
       out.write("                                        <label name=\"lblApellido\">Apellido</label>\n");
-      out.write("                                        <input class=\"form-control\" type=\"text\" name=\"txtApellido\" placeholder=\"Apellido\"required=\"\"/>\n");
+      out.write("                                        <input class=\"form-control\" type=\"text\" name=\"txtApellido\" placeholder=\"Apellido\"/>\n");
       out.write("                                    </div>\n");
       out.write("                                    <div class=\"col-md-3\">\n");
       out.write("                                        <label name=\"lblTitulo\">Titulo</label>\n");
@@ -112,11 +117,11 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                <div class = \"form-row\">\n");
       out.write("                                    <div class=\"col-md-3\">\n");
       out.write("                                        <label name=\"lblCorreo\">Correo electronico</label>\n");
-      out.write("                                        <input class=\"form-control\" type=\"email\" name=\"txtCorreo\" placeholder=\"Correo electronico\"required=\"\"/>\n");
+      out.write("                                        <input class=\"form-control\" type=\"email\" name=\"txtCorreo\" placeholder=\"Correo electronico\"/>\n");
       out.write("                                    </div>\n");
       out.write("                                    <div class=\"col-md-3\">\n");
       out.write("                                        <label name=\"lblTelefono\">Telefono</label>\n");
-      out.write("                                        <input class=\"form-control\" type=\"number\" name=\"txtTelefono\" placeholder=\"Telefono\"required=\"\"/>\n");
+      out.write("                                        <input class=\"form-control\" type=\"number\" name=\"txtTelefono\" placeholder=\"Telefono\"/>\n");
       out.write("                                    </div>\n");
       out.write("                                    <div class=\"col-md-3\">\n");
       out.write("                                        <label name=\"lblFax\">Fax</label>\n");
@@ -138,7 +143,7 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                    <div class=\"col-md-3\">\n");
       out.write("                                        <label name=\"lblFuenteCliente\">Fuente de posible cliente</label>\n");
       out.write("                                        <select class=\"form-control\" name=\"FuenteCliente\">\n");
-      out.write("                                            <option value=\"1\" > None</option>\n");
+      out.write("                                            <option value=\"1\" > Ninguno</option>\n");
       out.write("                                            <option value=\"2\"> Aviso</option>\n");
       out.write("                                            <option value=\"3\"> Llamada no solicitada</option>\n");
       out.write("                                            <option value=\"4\"> Recomendacion de empleado</option>\n");
@@ -149,7 +154,7 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                    <div class=\"col-md-3\">\n");
       out.write("                                        <label name=\"lblEstadoCliente\">Estado de posible cliente</label>\n");
       out.write("                                        <select class=\"form-control\" name=\"ddlEstadoCliente\">\n");
-      out.write("                                            <option value=\"1\"> None</option>\n");
+      out.write("                                            <option value=\"1\"> Ninguno</option>\n");
       out.write("                                            <option value=\"2\"> Intento de contacto</option>\n");
       out.write("                                            <option value=\"3\"> Contatactar en el futuro</option>\n");
       out.write("                                            <option value=\"4\"> Contactado</option>\n");
@@ -160,7 +165,7 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                    <div class=\"col-md-3\">\n");
       out.write("                                        <label name=\"lblSector\">Sector</label>\n");
       out.write("                                        <select class=\"form-control\" name=\"ddlSector\">\n");
-      out.write("                                            <option value=\"1\"> None</option>\n");
+      out.write("                                            <option value=\"1\"> Ninguno</option>\n");
       out.write("                                            <option value=\"2\"> APS (Proveedor de Servicio de Aplicaciones)</option>\n");
       out.write("                                            <option value=\"3\"> OEM de datos</option>\n");
       out.write("                                            <option value=\"4\"> ERP (Planificacion de Recursos de Empresa)</option>\n");
@@ -183,11 +188,11 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                    <div class=\"col-md-3\">\n");
       out.write("                                        <label name=\"lblCalificacion\">Calificacion</label>\n");
       out.write("                                        <select class=\"form-control\" name=\"ddlCalificacion\">\n");
-      out.write("                                            <option value=\"1\"> None</option>\n");
+      out.write("                                            <option value=\"1\"> Ninguno</option>\n");
       out.write("                                            <option value=\"2\"> Adquirido</option>\n");
       out.write("                                            <option value=\"3\"> Activo</option>\n");
       out.write("                                            <option value=\"4\"> Fallo de mercado</option>\n");
-      out.write("                                            <option value=\"5\"> Proyecto canelado</option>\n");
+      out.write("                                            <option value=\"5\"> Proyecto cancelado</option>\n");
       out.write("                                            <option value=\"6\"> Apagar</option>\n");
       out.write("                                        </select>\n");
       out.write("                                    </div>\n");

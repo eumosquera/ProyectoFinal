@@ -197,27 +197,28 @@ public class PosiblesClientesController extends HttpServlet {
                 obclsPosiblesClientes.setStCorreo2(request.getParameter("txtCorreo2"));
             }
             HttpSession session = request.getSession(true); // VARIABLE DE SESSION
-            
+
             List<Models.clsPosiblesClientes> lstclsPosiblesClientes = new ArrayList<Models.clsPosiblesClientes>(); //LISTA DE OBJETOS 
-            
-            if (session.getAttribute("session_lstclsPosiblesClientes")!=null){ // VALIDAR EXIXTENCIA DE LA VARIABLE DE SESSION
-                lstclsPosiblesClientes = (List<Models.clsPosiblesClientes>)session.getAttribute("session_lstclsPosiblesClientes");
+
+            if (session.getAttribute("session_lstclsPosiblesClientes") != null) { // VALIDAR EXIXTENCIA DE LA VARIABLE DE SESSION
+                lstclsPosiblesClientes = (List<Models.clsPosiblesClientes>) session.getAttribute("session_lstclsPosiblesClientes");
             }
             int inCodigo = lstclsPosiblesClientes.size() + 1; // CALCULO AUTOMATICO DEL REGISTRO INCLUYE LINEA NEXT
             obclsPosiblesClientes.setInCodigo(inCodigo);
-            
+
             lstclsPosiblesClientes.add(obclsPosiblesClientes); // AGREGAR OBJETO A LA LISTA
             session.setAttribute("session_lstclsPosiblesClientes", lstclsPosiblesClientes); // CREAR LA VARIABLE
-            
-            request.setAttribute("stMensaje", "Proceso realizado exitosamente"); /* DEFINIR VALORES INCLUYE LA LINEA NEXT */
+
+            request.setAttribute("stMensaje", "Proceso realizado exitosamente");
+            /* DEFINIR VALORES INCLUYE LA LINEA NEXT */
             request.setAttribute("stTipo", "success");
-            
+
             request.getRequestDispatcher("PosiblesClientes.jsp").forward(request, response); // REDIRECCION Y ENVIO DE VALORES
 
         } catch (Exception ex) {
             request.setAttribute("stMensaje", ex.getMessage());
             request.setAttribute("stTipo", "error");
-            
+
             request.getRequestDispatcher("PosiblesClientes.jsp").forward(request, response);
 
         }

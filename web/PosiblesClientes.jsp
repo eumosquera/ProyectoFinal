@@ -4,6 +4,8 @@
     Author     : urrutia03
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -26,8 +28,7 @@
         <!-- Core plugin JavaScript-->
         <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
         <link href="css/sweetalert.css"rel="stylesheet" type="text/css"/>
-        <script src="js/sweetalert.min.js" type="text/javascript">  </script>
-        
+        <script src="js/sweetalert.min.js" type="text/javascript"></script>
     </head>
     <body>
         <div calss ="container">
