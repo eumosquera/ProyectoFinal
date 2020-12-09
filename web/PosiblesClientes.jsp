@@ -31,6 +31,29 @@
         <script src="js/sweetalert.min.js" type="text/javascript"></script>
     </head>
     <body>
+        <%
+            List<Models.clsPosiblesClientes> lstclsPosiblesClienteses
+                    = new ArrayList<Models.clsPosiblesClientes>();
+            if (session.getAttribute("session_lstclsPosiblesClientes") != null) {
+                lstclsPosiblesClienteses = (List<Models.clsPosiblesClientes>) session.getAttribute("session_lstclsPosiblesClientes");
+            }
+
+            if (request.getAttribute("stMensaje")!=null &&
+                    request.getAttribute("stTipo")!=null){
+        %>
+        <input type="text" hidden="" id="txtMensaje"
+               value="<%=request.getAttribute("stMensaje")%>"/>
+        <input type="text" hidden="" id="txtTipo"
+               value="<%=request.getAttribute("stTipo")%>"/>
+        <script>
+            var mensaje = document.getElementById("txtMensaje").value;
+            var tipo = document.getElementById("txtTipo").value;
+            swal("Mensaje", mensaje,tipo);
+        </script>
+        <%
+            }
+        %>
+
         <div calss ="container">
             <div class ="card mx-auto mt-5">
                 <div class="card-header" class="align-content-lg-center">CREAR POSIBLES CLIENTES</div>
