@@ -10,7 +10,8 @@ package Models;
  * @author urrutia03
  */
 public class clsSector {
- public int inCodigo;
+
+    public int inCodigo;
 
     public int getInCodigo() {
         return inCodigo;
@@ -27,5 +28,5 @@ public class clsSector {
     public void setStDescripcion(String stDescripcion) {
         this.stDescripcion = stDescripcion;
     }
- public String stDescripcion;
+    public String stDescripcion;
 }

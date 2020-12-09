@@ -10,6 +10,7 @@ package Models;
  * @author urrutia03
  */
 public class clsPosiblesClientes {
+
     public String StEmpresa;
     public String stNombre;
     public String stApellido;
@@ -190,6 +191,5 @@ public class clsPosiblesClientes {
     public void setStCorreo2(String stCorreo2) {
         this.stCorreo2 = stCorreo2;
     }
-    
-    
+
 }

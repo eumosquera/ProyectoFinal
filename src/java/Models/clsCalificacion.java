@@ -10,6 +10,7 @@ package Models;
  * @author urrutia03
  */
 public class clsCalificacion {
+
     public int inCodigo;
     public String stDescripcion;
 
