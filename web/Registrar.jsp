@@ -67,12 +67,12 @@
                             </div>
                             <div class="form-row">
                                 <div class="col-md-6">
-                                    <label for="lblDireccion">Direccion</label>
+                                    <label for="lblDireccion">Dirección</label>
                                     <input class="form-control" name="txtDireccion" type="text" placeholder="Ingrese direccion">
                                     <br>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="lblTelefono">Telefono</label>
+                                    <label for="lblTelefono">Teléfono</label>
                                     <input class="form-control" name="txtTelefono" type="text" placeholder="Ingrese telefono">
                                     <br>
                                 </div>

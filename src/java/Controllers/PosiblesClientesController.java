@@ -114,7 +114,7 @@ public class PosiblesClientesController extends HttpServlet {
                 String stDescripcion = "";
 
                 if (request.getParameter("ddlFuentePosibleCliente").equals("1")) {
-                    stDescripcion = "Seleccione";
+                    stDescripcion = "Ninguno";
                 } else if (request.getParameter("ddlFuentePosibleCliente").equals("2")) {
                     stDescripcion = "Aviso";
                 } else if (request.getParameter("ddlFuentePosibleCliente").equals("3")) {
@@ -139,7 +139,7 @@ public class PosiblesClientesController extends HttpServlet {
                 String stDescripcion = "";
 
                 if (request.getParameter("ddlEstadoPosibleCliente").equals("1")) {
-                    stDescripcion = "Seleccione";
+                    stDescripcion = "Ninguno";
                 } else if (request.getParameter("ddlEstadoPosibleCliente").equals("2")) {
                     stDescripcion = "Intento de contacto";
                 } else if (request.getParameter("ddlEstadoPosibleCliente").equals("3")) {
@@ -164,7 +164,7 @@ public class PosiblesClientesController extends HttpServlet {
                 String stDescripcion = "";
 
                 if (request.getParameter("ddlSector").equals("1")) {
-                    stDescripcion = "Seleccione";
+                    stDescripcion = "Ninguno";
                 } else if (request.getParameter("ddlSector").equals("2")) {
                     stDescripcion = "APS(Proveedor de servicios de aplicaciones)";
                 } else if (request.getParameter("ddlSector").equals("3")) {
@@ -196,7 +196,7 @@ public class PosiblesClientesController extends HttpServlet {
                 String stDescripcion = "";
 
                 if (request.getParameter("ddlCalificacion").equals("1")) {
-                    stDescripcion = "Seleccione";
+                    stDescripcion = "Ninguno";
                 } else if (request.getParameter("ddlCalificacion").equals("2")) {
                     stDescripcion = "Adquirido";
                 } else if (request.getParameter("ddlCalificacion").equals("3")) {
@@ -231,8 +231,8 @@ public class PosiblesClientesController extends HttpServlet {
             if (request.getParameter("txtTwitter") != null) {
                 lstclsPosiblesClientes.get(inPosicion).setStTwitter(request.getParameter("txtTwitter"));
             }
-            if (request.getParameter("txtTwitter") != null) {
-                lstclsPosiblesClientes.get(inPosicion).setStCorreoElectronicoSecundario(request.getParameter("txtTwitter"));
+            if (request.getParameter("txtCorreoElectronicoSecundario") != null) {
+                lstclsPosiblesClientes.get(inPosicion).setStCorreoElectronicoSecundario(request.getParameter("txtCorreoElectronicoSecundario"));
             }
             
             session.setAttribute("session_lstclsPosiblesClientes", lstclsPosiblesClientes);
@@ -369,7 +369,7 @@ public class PosiblesClientesController extends HttpServlet {
                 String stDescripcion = "";
 
                 if (request.getParameter("ddlFuentePosibleCliente").equals("1")) {
-                    stDescripcion = "Seleccione";
+                    stDescripcion = "Ninguno";
                 } else if (request.getParameter("ddlFuentePosibleCliente").equals("2")) {
                     stDescripcion = "Aviso";
                 } else if (request.getParameter("ddlFuentePosibleCliente").equals("3")) {
@@ -394,7 +394,7 @@ public class PosiblesClientesController extends HttpServlet {
                 String stDescripcion = "";
 
                 if (request.getParameter("ddlEstadoPosibleCliente").equals("1")) {
-                    stDescripcion = "Seleccione";
+                    stDescripcion = "Ninguno";
                 } else if (request.getParameter("ddlEstadoPosibleCliente").equals("2")) {
                     stDescripcion = "Intento de contacto";
                 } else if (request.getParameter("ddlEstadoPosibleCliente").equals("3")) {
@@ -451,7 +451,7 @@ public class PosiblesClientesController extends HttpServlet {
                 String stDescripcion = "";
 
                 if (request.getParameter("ddlCalificacion").equals("1")) {
-                    stDescripcion = "Seleccione";
+                    stDescripcion = "Ninguno";
                 } else if (request.getParameter("ddlCalificacion").equals("2")) {
                     stDescripcion = "Adquirido";
                 } else if (request.getParameter("ddlCalificacion").equals("3")) {
@@ -486,8 +486,8 @@ public class PosiblesClientesController extends HttpServlet {
             if (request.getParameter("txtTwitter") != null) {
                 obclsPosiblesClientes.setStTwitter(request.getParameter("txtTwitter"));
             }
-            if (request.getParameter("txtTwitter") != null) {
-                obclsPosiblesClientes.setStCorreoElectronicoSecundario(request.getParameter("txtTwitter"));
+            if (request.getParameter("txtCorreoElectronicoSecundario") != null) {
+                obclsPosiblesClientes.setStCorreoElectronicoSecundario(request.getParameter("txtCorreoElectronicoSecundario"));
             }
 
             HttpSession session = request.getSession(true);

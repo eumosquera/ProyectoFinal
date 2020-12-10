@@ -41,7 +41,7 @@ public class LoginController extends HttpServlet {
                 stMensaje += "No se ingresó correo!";
             }
             if (request.getParameter("txtPassword").equals("")) {
-                stMensaje += "No se ingresó contraseña";
+                stMensaje += "No se ingresó contraseña!";
             }
 
             if (!stMensaje.equals("")) {

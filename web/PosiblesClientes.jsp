@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title class="bg-primary">Posibles clientes</title>
+        <title class="bg-primary">Posibles Clientes</title>
         <!-- Bootstrap core CSS-->
         <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
         <!-- Custom fonts for this template-->
@@ -65,7 +65,7 @@
         %>    
         <div class="container">
             <div class="card mx-auto mt-5">
-                <div class="card-header"> <b>Crear Posibles Clientes</b> </div>
+                <div class="card-header"> <b>CREAR POSIBLES CLIENTES</b> </div>
                 <div class="card-body">
                     <form action="PosiblesClientesController" method="POST">
 
@@ -141,7 +141,7 @@
                                 <div class="col-md-3">
                                     <label name="lblFuentePosibleCliente">Fuente de posible cliente</label>
                                     <select class="form-control " name="ddlFuentePosibleCliente">
-                                        <option value="1" <%= obclsPosiblesClientes.obclsFuentePosibleCliente != null ? obclsPosiblesClientes.obclsFuentePosibleCliente.getInCodigo() == 1 ? "selected" : "" : ""%>>--Seleccione--</option>
+                                        <option value="1" <%= obclsPosiblesClientes.obclsFuentePosibleCliente != null ? obclsPosiblesClientes.obclsFuentePosibleCliente.getInCodigo() == 1 ? "selected" : "" : ""%>>Ninguno</option>
                                         <option value="2" <%= obclsPosiblesClientes.obclsFuentePosibleCliente != null ? obclsPosiblesClientes.obclsFuentePosibleCliente.getInCodigo() == 2 ? "selected" : "" : ""%>>Aviso</option>
                                         <option value="3" <%= obclsPosiblesClientes.obclsFuentePosibleCliente != null ? obclsPosiblesClientes.obclsFuentePosibleCliente.getInCodigo() == 3 ? "selected" : "" : ""%>>Llamada no solicitada</option>
                                         <option value="4" <%= obclsPosiblesClientes.obclsFuentePosibleCliente != null ? obclsPosiblesClientes.obclsFuentePosibleCliente.getInCodigo() == 4 ? "selected" : "" : ""%>>Recomendacion de empleado</option>
@@ -152,7 +152,7 @@
                                 <div class="col-md-3">
                                     <label name="lblEstadoPosibleCliente">Estado de posible cliente</label>
                                     <select class="form-control" name="ddlEstadoPosibleCliente">
-                                        <option value="1" <%= obclsPosiblesClientes.obclsEstadoPosibleCliente != null ? obclsPosiblesClientes.obclsEstadoPosibleCliente.getInCodigo() == 1 ? "selected" : "" : ""%>>--Seleccione--</option>
+                                        <option value="1" <%= obclsPosiblesClientes.obclsEstadoPosibleCliente != null ? obclsPosiblesClientes.obclsEstadoPosibleCliente.getInCodigo() == 1 ? "selected" : "" : ""%>>Ninguno</option>
                                         <option value="2" <%= obclsPosiblesClientes.obclsEstadoPosibleCliente != null ? obclsPosiblesClientes.obclsEstadoPosibleCliente.getInCodigo() == 2 ? "selected" : "" : ""%>>Intento de contacto</option>
                                         <option value="3" <%= obclsPosiblesClientes.obclsEstadoPosibleCliente != null ? obclsPosiblesClientes.obclsEstadoPosibleCliente.getInCodigo() == 3 ? "selected" : "" : ""%>>Contactar en el futuro</option>
                                         <option value="4" <%= obclsPosiblesClientes.obclsEstadoPosibleCliente != null ? obclsPosiblesClientes.obclsEstadoPosibleCliente.getInCodigo() == 4 ? "selected" : "" : ""%>>Contactado</option>
@@ -163,7 +163,7 @@
                                 <div class="col-md-3">
                                     <label name="lblSector">Sector</label>
                                     <select class="form-control" name="ddlSector" >
-                                        <option value="1" <%= obclsPosiblesClientes.obclsSector != null ? obclsPosiblesClientes.obclsSector.getInCodigo() == 1 ? "selected" : "" : ""%>>--Seleccione--</option>
+                                        <option value="1" <%= obclsPosiblesClientes.obclsSector != null ? obclsPosiblesClientes.obclsSector.getInCodigo() == 1 ? "selected" : "" : ""%>>Ninguno</option>
                                         <option value="2" <%= obclsPosiblesClientes.obclsSector != null ? obclsPosiblesClientes.obclsSector.getInCodigo() == 2 ? "selected" : "" : ""%>>APS(Proveedor de servicios de aplicaciones)</option>
                                         <option value="3" <%= obclsPosiblesClientes.obclsSector != null ? obclsPosiblesClientes.obclsSector.getInCodigo() == 3 ? "selected" : "" : ""%>>OEM de datos</option>
                                         <option value="4" <%= obclsPosiblesClientes.obclsSector != null ? obclsPosiblesClientes.obclsSector.getInCodigo() == 4 ? "selected" : "" : ""%>>ERP(Planificacion de recursos de empresa)</option>
@@ -190,7 +190,7 @@
                                 <div class="col-md-3">
                                     <label name="lblCalificacion">Calificacion</label><br>
                                     <select class="form-control" name="ddlCalificacion">
-                                        <option value="1" <%= obclsPosiblesClientes.obclsCalificacion != null ? obclsPosiblesClientes.obclsCalificacion.getInCodigo() == 1 ? "selected" : "" : ""%>>--Seleccione--</option>
+                                        <option value="1" <%= obclsPosiblesClientes.obclsCalificacion != null ? obclsPosiblesClientes.obclsCalificacion.getInCodigo() == 1 ? "selected" : "" : ""%>>Ninguno</option>
                                         <option value="2" <%= obclsPosiblesClientes.obclsCalificacion != null ? obclsPosiblesClientes.obclsCalificacion.getInCodigo() == 2 ? "selected" : "" : ""%>>Adquirido</option>
                                         <option value="3" <%= obclsPosiblesClientes.obclsCalificacion != null ? obclsPosiblesClientes.obclsCalificacion.getInCodigo() == 3 ? "selected" : "" : ""%>>Activo</option>
                                         <option value="4" <%= obclsPosiblesClientes.obclsCalificacion != null ? obclsPosiblesClientes.obclsCalificacion.getInCodigo() == 4 ? "selected" : "" : ""%>>Contactado</option>
@@ -238,9 +238,9 @@
                                     <input type="submit" value="Guardar" 
                                            class="btn btn-outline-primary" name="btnGuardar"/>
                                     <input type="submit" value="Modificar" 
-                                           class="btn btn-outline-primary" name="btnModificar"/>
+                                           class="btn btn-outline-success" name="btnModificar"/>
                                     <input type="submit" value="Cancelar" 
-                                           class="btn btn-outline-primary" name="btnCancelar"/>
+                                           class="btn btn-outline-danger" name="btnCancelar"/>
                                     <a class="btn btn-outline-primary position-sticky" href="Index.jsp">Volver</a>
                                     <input type="text" name="codigoModificar"
                                            id="codigoModificar" value="<%= obclsPosiblesClientes.getInCodigo()%>"
@@ -261,8 +261,8 @@
                         <div class="from-group">
                             <div class="form-row">
                                 <div class="col-12">
-                                    <table class="table table-bordered table-responsive table-striped">
-                                        <thead class="thead-dark">
+                                    <table class="table table-bordered table-responsive table-striped table-striped">
+                                        <thead class="thead-light">
                                             <tr>
                                                 <td><b>Empresa</b></td>
                                                 <td><b>Nombre</b></td>
@@ -314,7 +314,7 @@
                                             <td><%= item.getStTwitter()%></td>
                                             <td><%= item.getStCorreoElectronicoSecundario()%></td>
                                             <td>
-                                                <a class="btn btn-success btn-sm"
+                                                <a class="btn btn-info btn-sm"
                                                    href="PosiblesClientesController?stOpcion=M&codigoSeleccionado=<%= item.getInCodigo()%>">
                                                     Modificar</a>
                                                 <a class="btn btn-danger btn-sm"
