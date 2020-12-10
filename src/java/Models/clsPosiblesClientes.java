@@ -16,16 +16,16 @@ public class clsPosiblesClientes {
     public String stApellido;
     public String stTitulo;
     public String stCorreo;
-    public int stTelefono;
+    public String stTelefono;
     public String stFax;
-    public int stMovil;
+    public String  stMovil;
     public String stSitioWeb;
     public clsFuenteCliente obclsFuenteCliente;
     public clsEstadoCliente obclsEstadoCliente;
     public clsSector obclsSector;
-    public int CantidaEmpleado;
+    public int inCantidaEmpleado;
     public double dbIngresoAnual;
-    public clsCalificacion obcCalificacion;
+    public clsCalificacion obclsCalificacion;
     public char chNoCorreo;
     public String stIDSkype;
     public String stTwitter;
@@ -80,11 +80,11 @@ public class clsPosiblesClientes {
         this.stCorreo = stCorreo;
     }
 
-    public int getStTelefono() {
+    public String getStTelefono() {
         return stTelefono;
     }
 
-    public void setStTelefono(int stTelefono) {
+    public void setStTelefono(String stTelefono) {
         this.stTelefono = stTelefono;
     }
 
@@ -96,11 +96,11 @@ public class clsPosiblesClientes {
         this.stFax = stFax;
     }
 
-    public int getStMovil() {
+    public String getStMovil() {
         return stMovil;
     }
 
-    public void setStMovil(int stMovil) {
+    public void setStMovil(String stMovil) {
         this.stMovil = stMovil;
     }
 
@@ -136,12 +136,12 @@ public class clsPosiblesClientes {
         this.obclsSector = obclsSector;
     }
 
-    public int getCantidaEmpleado() {
-        return CantidaEmpleado;
+    public int getinCantidaEmpleado() {
+        return inCantidaEmpleado;
     }
 
-    public void setCantidaEmpleado(int CantidaEmpleado) {
-        this.CantidaEmpleado = CantidaEmpleado;
+    public void setinCantidaEmpleado(int CantidaEmpleado) {
+        this.inCantidaEmpleado = inCantidaEmpleado;
     }
 
     public double getDbIngresoAnual() {
@@ -152,12 +152,12 @@ public class clsPosiblesClientes {
         this.dbIngresoAnual = dbIngresoAnual;
     }
 
-    public clsCalificacion getObcCalificacion() {
-        return obcCalificacion;
+    public clsCalificacion getObclsCalificacion() {
+        return obclsCalificacion;
     }
 
-    public void setObcCalificacion(clsCalificacion obcCalificacion) {
-        this.obcCalificacion = obcCalificacion;
+    public void setObclsCalificacion(clsCalificacion obclsCalificacion) {
+        this.obclsCalificacion = obclsCalificacion;
     }
 
     public char getChNoCorreo() {
