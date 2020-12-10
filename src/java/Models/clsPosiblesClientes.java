@@ -7,45 +7,16 @@ package Models;
 
 /**
  *
- * @author urrutia03
+ * @author 57318
  */
 public class clsPosiblesClientes {
 
-    public String StEmpresa;
-    public String stNombre;
-    public String stApellido;
-    public String stTitulo;
-    public String stCorreo;
-    public String stTelefono;
-    public String stFax;
-    public String  stMovil;
-    public String stSitioWeb;
-    public clsFuenteCliente obclsFuenteCliente;
-    public clsEstadoCliente obclsEstadoCliente;
-    public clsSector obclsSector;
-    public int inCantidaEmpleado;
-    public double dbIngresoAnual;
-    public clsCalificacion obclsCalificacion;
-    public char chNoCorreo;
-    public String stIDSkype;
-    public String stTwitter;
-    public String stCorreo2;
-    public int inCodigo;
-
-    public int getInCodigo() {
-        return inCodigo;
-    }
-
-    public void setInCodigo(int inCodigo) {
-        this.inCodigo = inCodigo;
-    }
-
     public String getStEmpresa() {
-        return StEmpresa;
+        return stEmpresa;
     }
 
-    public void setStEmpresa(String StEmpresa) {
-        this.StEmpresa = StEmpresa;
+    public void setStEmpresa(String stEmpresa) {
+        this.stEmpresa = stEmpresa;
     }
 
     public String getStNombre() {
@@ -56,12 +27,12 @@ public class clsPosiblesClientes {
         this.stNombre = stNombre;
     }
 
-    public String getStApellido() {
-        return stApellido;
+    public String getStApellidos() {
+        return stApellidos;
     }
 
-    public void setStApellido(String stApellido) {
-        this.stApellido = stApellido;
+    public void setStApellidos(String stApellidos) {
+        this.stApellidos = stApellidos;
     }
 
     public String getStTitulo() {
@@ -72,12 +43,12 @@ public class clsPosiblesClientes {
         this.stTitulo = stTitulo;
     }
 
-    public String getStCorreo() {
-        return stCorreo;
+    public String getStCorreoElectronico() {
+        return stCorreoElectronico;
     }
 
-    public void setStCorreo(String stCorreo) {
-        this.stCorreo = stCorreo;
+    public void setStCorreoElectronico(String stCorreoElectronico) {
+        this.stCorreoElectronico = stCorreoElectronico;
     }
 
     public String getStTelefono() {
@@ -112,20 +83,20 @@ public class clsPosiblesClientes {
         this.stSitioWeb = stSitioWeb;
     }
 
-    public clsFuenteCliente getObclsFuenteCliente() {
-        return obclsFuenteCliente;
+    public clsFuentePosibleCliente getObclsFuentePosibleCliente() {
+        return obclsFuentePosibleCliente;
     }
 
-    public void setObclsFuenteCliente(clsFuenteCliente obclsFuenteCliente) {
-        this.obclsFuenteCliente = obclsFuenteCliente;
+    public void setObclsFuentePosibleCliente(clsFuentePosibleCliente obclsFuentePosibleCliente) {
+        this.obclsFuentePosibleCliente = obclsFuentePosibleCliente;
     }
 
-    public clsEstadoCliente getObclsEstadoCliente() {
-        return obclsEstadoCliente;
+    public clsEstadoPosibleCliente getObclsEstadoPosibleCliente() {
+        return obclsEstadoPosibleCliente;
     }
 
-    public void setObclsEstadoCliente(clsEstadoCliente obclsEstadoCliente) {
-        this.obclsEstadoCliente = obclsEstadoCliente;
+    public void setObclsEstadoPosibleCliente(clsEstadoPosibleCliente obclsEstadoPosibleCliente) {
+        this.obclsEstadoPosibleCliente = obclsEstadoPosibleCliente;
     }
 
     public clsSector getObclsSector() {
@@ -136,20 +107,20 @@ public class clsPosiblesClientes {
         this.obclsSector = obclsSector;
     }
 
-    public int getinCantidaEmpleado() {
-        return inCantidaEmpleado;
+    public int getInCantidadEmpleados() {
+        return inCantidadEmpleados;
     }
 
-    public void setinCantidaEmpleado(int CantidaEmpleado) {
-        this.inCantidaEmpleado = inCantidaEmpleado;
+    public void setInCantidadEmpleados(int inCantidadEmpleados) {
+        this.inCantidadEmpleados = inCantidadEmpleados;
     }
 
-    public double getDbIngresoAnual() {
-        return dbIngresoAnual;
+    public double getDbIngresosAnuales() {
+        return dbIngresosAnuales;
     }
 
-    public void setDbIngresoAnual(double dbIngresoAnual) {
-        this.dbIngresoAnual = dbIngresoAnual;
+    public void setDbIngresosAnuales(double dbIngresosAnuales) {
+        this.dbIngresosAnuales = dbIngresosAnuales;
     }
 
     public clsCalificacion getObclsCalificacion() {
@@ -160,12 +131,12 @@ public class clsPosiblesClientes {
         this.obclsCalificacion = obclsCalificacion;
     }
 
-    public char getChNoCorreo() {
-        return chNoCorreo;
+    public char getChNoParticipacionCorreoElectronico() {
+        return chNoParticipacionCorreoElectronico;
     }
 
-    public void setChNoCorreo(char chNoCorreo) {
-        this.chNoCorreo = chNoCorreo;
+    public void setChNoParticipacionCorreoElectronico(char chNoParticipacionCorreoElectronico) {
+        this.chNoParticipacionCorreoElectronico = chNoParticipacionCorreoElectronico;
     }
 
     public String getStIDSkype() {
@@ -184,12 +155,50 @@ public class clsPosiblesClientes {
         this.stTwitter = stTwitter;
     }
 
-    public String getStCorreo2() {
-        return stCorreo2;
+    public String getStCorreoElectronicoSecundario() {
+        return stCorreoElectronicoSecundario;
     }
 
-    public void setStCorreo2(String stCorreo2) {
-        this.stCorreo2 = stCorreo2;
+    public void setStCorreoElectronicoSecundario(String stCorreoElectronicoSecundario) {
+        this.stCorreoElectronicoSecundario = stCorreoElectronicoSecundario;
     }
 
+    public int inCodigo;
+
+    public int getInCodigo() {
+        return inCodigo;
+    }
+
+    public void setInCodigo(int inCodigo) {
+        this.inCodigo = inCodigo;
+    }
+
+    public String getStOpcion() {
+        return stOpcion;
+    }
+
+    public void setStOpcion(String stOpcion) {
+        this.stOpcion = stOpcion;
+    }
+
+    public String stOpcion;
+    public String stEmpresa;
+    public String stNombre;
+    public String stApellidos;
+    public String stTitulo;
+    public String stCorreoElectronico;
+    public String stTelefono;
+    public String stFax;
+    public String stMovil;
+    public String stSitioWeb;
+    public clsFuentePosibleCliente obclsFuentePosibleCliente;
+    public clsEstadoPosibleCliente obclsEstadoPosibleCliente;
+    public clsSector obclsSector;
+    public int inCantidadEmpleados;
+    public double dbIngresosAnuales;
+    public clsCalificacion obclsCalificacion;
+    public char chNoParticipacionCorreoElectronico;
+    public String stIDSkype;
+    public String stTwitter;
+    public String stCorreoElectronicoSecundario;
 }

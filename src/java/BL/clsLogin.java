@@ -3,20 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package BL;
+package Bl;
 
 /**
  *
- * @author urrutia03
+ * @author 57318
  */
-public class clsLogins {
+public class clsLogin {
 
-    public boolean validarLogins(Models.clsLogins obclsLogins) {
+    public boolean validarLogin(Models.ClsLogin obclsLogin) {
         try {
-
-            return obclsLogins.getStEmail().equals("endermu28@gmail.com")
-                    && obclsLogins.getStPassword().equals("0147");
-
+            return obclsLogin.getStEmail().equals("endermu28@gmail.com")
+                    && obclsLogin.getStPassword().equals("0147");
         } catch (Exception ex) {
             throw ex;
         }

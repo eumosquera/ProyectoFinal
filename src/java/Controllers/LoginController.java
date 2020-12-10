@@ -7,7 +7,6 @@ package Controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.HashSet;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author ing.soporte
+ * @author 57318
  */
 @WebServlet(name = "LoginController", urlPatterns = {"/LoginController"})
 public class LoginController extends HttpServlet {
@@ -32,35 +31,43 @@ public class LoginController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+
         try {
 
             String stMensaje = "";
-            if (request.getParameter("txtEmail1").equals("")) {
-                stMensaje += "No se ingresó correo! ";
+
+            if (request.getParameter("txtEmail").equals("")) {
+                stMensaje += "No se ingresó correo!";
             }
             if (request.getParameter("txtPassword").equals("")) {
-                stMensaje += "No se ingresó contraseña!";
+                stMensaje += "No se ingresó contraseña";
             }
+
             if (!stMensaje.equals("")) {
-                throw new Exception(stMensaje);
+                throw new Exception(stMensaje.substring(0, stMensaje.length() - 1));
             }
-            Models.clsLogins obclsLogins = new Models.clsLogins();
-            obclsLogins.setStEmail(request.getParameter("txtEmail1").toString());
-            obclsLogins.setStPassword(request.getParameter("txtPassword").toString());
 
-            BL.clsLogins obBLclsLogins = new BL.clsLogins();
+            Models.ClsLogin obclsLogin = new Models.ClsLogin();
 
-            boolean blflag = obBLclsLogins.validarLogins(obclsLogins);
+            obclsLogin.setStEmail(request.getParameter("txtEmail").toString());
+            obclsLogin.setStPassword(request.getParameter("txtPassword").toString());
 
-            if (blflag) {
+            Bl.clsLogin obBlclsLogin = new Bl.clsLogin();
+
+            boolean blBandera = obBlclsLogin.validarLogin(obclsLogin);
+
+            if (blBandera) {
                 request.getRequestDispatcher("Index.jsp").forward(request, response);
             } else {
-                throw new Exception("Correo o Contraseña invalida");
+                throw new Exception("Correo o contrseña invalido");
             }
+
         } catch (Exception ex) {
             request.setAttribute("stError", ex.getMessage());
-            request.getRequestDispatcher("Logins.jsp").forward(request, response);
+            request.getRequestDispatcher("Login.jsp").forward(request, response);
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

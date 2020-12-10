@@ -7,7 +7,7 @@ package Models;
 
 /**
  *
- * @author urrutia03
+ * @author 57318
  */
 public class clsCalificacion {
 
