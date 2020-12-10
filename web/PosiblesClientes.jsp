@@ -1,4 +1,4 @@
-<%-- 
+git <%-- 
     Document   : PosiblesClientes
     Created on : 3/12/2020, 07:12:15 PM
     Author     : 57318
@@ -261,7 +261,7 @@
                         <div class="from-group">
                             <div class="form-row">
                                 <div class="col-12">
-                                    <table class="table table-bordered table-responsive table-striped table-striped">
+                                    <table class="table table-bordered table-responsive table-striped">
                                         <thead class="thead-light">
                                             <tr>
                                                 <td><b>Empresa</b></td>

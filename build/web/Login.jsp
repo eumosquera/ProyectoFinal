@@ -50,7 +50,7 @@
             <div class="card card-login mx-auto mt-5">
                 <div class="card-header">Login</div>
                 <div class="card-body">
-                    <form action="LoginController" method="POST">
+                    <form action="LoginController" method="post">
                         <div class="form-group">
                             <label for="lblEmail">Email</label>
                             <input class="form-control" name="txtEmail" type="email" aria-describedby="emailHelp" placeholder="Ingrese Email">

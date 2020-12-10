@@ -43,6 +43,7 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("git ");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -210,7 +211,7 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                    <select class=\"form-control \" name=\"ddlFuentePosibleCliente\">\n");
       out.write("                                        <option value=\"1\" ");
       out.print( obclsPosiblesClientes.obclsFuentePosibleCliente != null ? obclsPosiblesClientes.obclsFuentePosibleCliente.getInCodigo() == 1 ? "selected" : "" : "");
-      out.write(">--Seleccione--</option>\n");
+      out.write(">Ninguno</option>\n");
       out.write("                                        <option value=\"2\" ");
       out.print( obclsPosiblesClientes.obclsFuentePosibleCliente != null ? obclsPosiblesClientes.obclsFuentePosibleCliente.getInCodigo() == 2 ? "selected" : "" : "");
       out.write(">Aviso</option>\n");
@@ -233,7 +234,7 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                    <select class=\"form-control\" name=\"ddlEstadoPosibleCliente\">\n");
       out.write("                                        <option value=\"1\" ");
       out.print( obclsPosiblesClientes.obclsEstadoPosibleCliente != null ? obclsPosiblesClientes.obclsEstadoPosibleCliente.getInCodigo() == 1 ? "selected" : "" : "");
-      out.write(">--Seleccione--</option>\n");
+      out.write(">Ninguno</option>\n");
       out.write("                                        <option value=\"2\" ");
       out.print( obclsPosiblesClientes.obclsEstadoPosibleCliente != null ? obclsPosiblesClientes.obclsEstadoPosibleCliente.getInCodigo() == 2 ? "selected" : "" : "");
       out.write(">Intento de contacto</option>\n");
@@ -256,7 +257,7 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                    <select class=\"form-control\" name=\"ddlSector\" >\n");
       out.write("                                        <option value=\"1\" ");
       out.print( obclsPosiblesClientes.obclsSector != null ? obclsPosiblesClientes.obclsSector.getInCodigo() == 1 ? "selected" : "" : "");
-      out.write(">--Seleccione--</option>\n");
+      out.write(">Ninguno</option>\n");
       out.write("                                        <option value=\"2\" ");
       out.print( obclsPosiblesClientes.obclsSector != null ? obclsPosiblesClientes.obclsSector.getInCodigo() == 2 ? "selected" : "" : "");
       out.write(">APS(Proveedor de servicios de aplicaciones)</option>\n");
@@ -299,7 +300,7 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                    <select class=\"form-control\" name=\"ddlCalificacion\">\n");
       out.write("                                        <option value=\"1\" ");
       out.print( obclsPosiblesClientes.obclsCalificacion != null ? obclsPosiblesClientes.obclsCalificacion.getInCodigo() == 1 ? "selected" : "" : "");
-      out.write(">--Seleccione--</option>\n");
+      out.write(">Ninguno</option>\n");
       out.write("                                        <option value=\"2\" ");
       out.print( obclsPosiblesClientes.obclsCalificacion != null ? obclsPosiblesClientes.obclsCalificacion.getInCodigo() == 2 ? "selected" : "" : "");
       out.write(">Adquirido</option>\n");
