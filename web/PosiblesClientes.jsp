@@ -34,10 +34,10 @@
     <body>
         <%
             Models.clsPosiblesClientes obclsPosiblesClientes = new Models.clsPosiblesClientes();
-            List<Models.clsPosiblesClientes> lstclsPosiblesClienteses
+            List<Models.clsPosiblesClientes> lstclsPosiblesClientes
                     = new ArrayList<Models.clsPosiblesClientes>();
             if (session.getAttribute("session_lstclsPosiblesClientes") != null) {
-                lstclsPosiblesClienteses = (List<Models.clsPosiblesClientes>) session.getAttribute("session_lstclsPosiblesClientes");
+                lstclsPosiblesClientes = (List<Models.clsPosiblesClientes>) session.getAttribute("session_lstclsPosiblesClientes");
             }
 
             if (request.getAttribute("stMensaje") != null
@@ -106,7 +106,7 @@
                                         <label name="lblTelefono">Telefono</label>
                                         <input type="text" placeholder="Telefono" name="txtTelefono" 
                                                class="form-control"
-                                               value="<%=obclsPosiblesClientes.getStTelefono () !=null ? obclsPosiblesClientes.getStTelefono():""%>"/>
+                                               value="<%=obclsPosiblesClientes.getStTelefono() != null ? obclsPosiblesClientes.getStTelefono() : ""%>"/>
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblFax">Fax</label>
@@ -171,7 +171,7 @@
                                         <label name="lblCantidadEmpleados">Cantidad de empleados</label>
                                         <input type="number" placeholder="Cantidad de empleados" 
                                                name="txtCantidadEmpleados" class="form-control"
-                                               value="<%= obclsPosiblesClientes.getinCantidaEmpleado()!= 0 ? obclsPosiblesClientes.getinCantidaEmpleado() : ""%>"/>
+                                               value="<%= obclsPosiblesClientes.getinCantidaEmpleado() != 0 ? obclsPosiblesClientes.getinCantidaEmpleado() : ""%>"/>
                                     </div>
                                     <div class="col-md-3">
                                         <label name="lblIngresosAnueales">Ingreses anuales</label>
@@ -195,7 +195,7 @@
                                         <label name="lblNoCorreo">
                                             <input type="checkbox" class="from-control" 
                                                    name="chkNoCorreo"
-                                                   <%= obclsPosiblesClientes.getChNoCorreo()== 'S' ? "checked" : " "%>/>    
+                                                   <%= obclsPosiblesClientes.getChNoCorreo() == 'S' ? "checked" : " "%>/>    
                                             No participacion correo electronico
                                         </label>
                                     </div>
@@ -220,23 +220,24 @@
                                         <input type="email" placeholder="Correo electronico secundario" 
                                                name="txtCorreo2" class="form-control"
                                                value="<%= obclsPosiblesClientes.getStCorreo2()
-                                                   != null ? obclsPosiblesClientes.getStCorreo2() : ""%>"/>
+                                                       != null ? obclsPosiblesClientes.getStCorreo2() : ""%>"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-row">
                                     <div class="col-md-6">
+
                                         <input type="submit" value="Guardar" 
+
                                                class="btn btn-outline-primary" name="btnGuardar"/>
                                         <input type="submit" value="Modificar" 
-                                               class="btn btn-outline-primary" name="btnModificar"/>
+                                               class="btn btn-outline-success" name="btnModificar"/>
                                         <input type="submit" value="Cancelar" 
-                                               class="btn btn-outline-primary" name="btnCancelar"/>
+                                               class="btn btn-outline-danger" name="btnCancelar"/>
                                         <a class="btn btn-outline-primary position-sticky" href="Index.jsp">Volver</a>
-                                        <input type="text" name="codigoModificar"
-                                               id="codigoModificar" value="<%= obclsPosiblesClientes.getInCodigo()%>"
-                                               hidden=""/>
+                                        <input type="text" name="codigomodificar" id="codigomodificar" 
+                                               value="<%= obclsPosiblesClientes.getInCodigo()%>" hidden=""/>
                                     </div>
                                 </div>
                             </div>
@@ -245,7 +246,7 @@
                                     <div class="col-md-12">
                                         <bl> 
                                             <i class="fa fa-clipboard"></i>
-                                            Registros: <%= lstclsPosiblesClienteses.size()%>
+                                            Registros: <%= lstclsPosiblesClientes.size()%>
                                         </bl>
                                     </div>
                                 </div>
@@ -277,7 +278,7 @@
                                                 <td>Opciones</td>
                                             </tr>
                                             <%
-                                                for (Models.clsPosiblesClientes item : lstclsPosiblesClienteses) {
+                                                for (Models.clsPosiblesClientes item : lstclsPosiblesClientes) {
                                                     Models.clsFuenteCliente obclsFuenteCliente = item.getObclsFuenteCliente();
                                                     Models.clsEstadoCliente obclsEstadoCliente = item.getObclsEstadoCliente();
                                                     Models.clsSector obclsSector = item.getObclsSector();
@@ -301,14 +302,15 @@
                                                 <td><%= obclsCalificacion.getStDescripcion()%></td>
                                                 <td><%= item.getChNoCorreo()%></td>
                                                 <td><%= item.getStIDSkype()%></td>
-                                                <td><%=item.getStTwitter()%></td>
+                                                <td><%= item.getStTwitter()%></td>
                                                 <td><%= item.getStCorreo2()%></td>
                                                 <td>
-                                                    <a class="btn btn-success btn-sm"
-                                                       href="PosiblesClientesController?stOpcion=M&codigoSeleccionado=<%= item.getInCodigo()%>">
+                                                    <a class="btn btn-primary btn-sm"
+                                                       href="PosiblesClientesController?stOpcion=M&codigoSeleccionado=<%=item.getInCodigo()%>">
                                                         Modificar</a>
+
                                                     <a class="btn btn-danger btn-sm"
-                                                       href="PosiblesClientesController?stOpcion=E&codigoSeleccionado=<%= item.getInCodigo()%>">
+                                                       href="PosiblesClientesController?stOpcion=E&codigoSeleccionado=<%=item.getInCodigo()%>">
                                                         Eliminar</a>
                                                 </td>
                                             </tr>

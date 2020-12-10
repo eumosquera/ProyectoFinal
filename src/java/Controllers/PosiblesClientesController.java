@@ -73,13 +73,14 @@ public class PosiblesClientesController extends HttpServlet {
                 if (elem.getInCodigo() == Integer.parseInt(request.getParameter("codigoModificar"))) {
                     break;
                 }
-                inPosicion++;
+                
             }
 
             Models.clsFuenteCliente obclsFuenteCliente = new Models.clsFuenteCliente();
             Models.clsEstadoCliente obclsEstadoCliente = new Models.clsEstadoCliente();
             Models.clsSector obclsSector = new Models.clsSector();
             Models.clsCalificacion obclsCalificacion = new Models.clsCalificacion();
+            inPosicion++;
 
             if (request.getParameter("txtEmpresa") != null) {
                 lstclsPosiblesClientes.get(inPosicion).setStEmpresa(request.getParameter("txtEmpresa"));
@@ -330,7 +331,6 @@ public class PosiblesClientesController extends HttpServlet {
         try {
 
             Models.clsPosiblesClientes obclsPosiblesClientes = new Models.clsPosiblesClientes();
-            
             Models.clsFuenteCliente obclsFuenteCliente = new Models.clsFuenteCliente();
             Models.clsEstadoCliente obclsEstadoCliente = new Models.clsEstadoCliente();
             Models.clsSector obclsSector = new Models.clsSector();
