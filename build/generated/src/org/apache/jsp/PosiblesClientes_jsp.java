@@ -395,7 +395,7 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                        <div class=\"from-group\">\n");
       out.write("                            <div class=\"form-row\">\n");
       out.write("                                <div class=\"col-12\">\n");
-      out.write("                                    <table class=\"table table-bordered table-responsive table-striped table-striped\">\n");
+      out.write("                                    <table class=\"table table-bordered table-responsive table-striped\">\n");
       out.write("                                        <thead class=\"thead-light\">\n");
       out.write("                                            <tr>\n");
       out.write("                                                <td><b>Empresa</b></td>\n");
