@@ -237,7 +237,7 @@ public class PosiblesClientesController extends HttpServlet {
             
             session.setAttribute("session_lstclsPosiblesClientes", lstclsPosiblesClientes);
 
-            request.setAttribute("stMensaje", "Se realizo proceso con exito");
+            request.setAttribute("stMensaje", "¡Proceso realizado exitosamente!");
             request.setAttribute("stTipo", "success");
 
             request.getRequestDispatcher("PosiblesClientes.jsp").forward(request, response);
@@ -278,7 +278,7 @@ public class PosiblesClientesController extends HttpServlet {
 
             session.setAttribute("session_lstclsPosiblesClientes", lstclsPosiblesClienteses);
             request.setAttribute("stTipo", "success");
-            request.setAttribute("stMensaje", "Se realizo proceso con exito");
+            request.setAttribute("stMensaje", "¡Proceso realizado exitosamente!");
             request.getRequestDispatcher("PosiblesClientes.jsp").forward(request, response);
 
         } catch (Exception ex) {
@@ -504,7 +504,7 @@ public class PosiblesClientesController extends HttpServlet {
             lstclsPosiblesClientes.add(obclsPosiblesClientes);
             session.setAttribute("session_lstclsPosiblesClientes", lstclsPosiblesClientes);
 
-            request.setAttribute("stMensaje", "Se realizo proceso con exito");
+            request.setAttribute("stMensaje", "¡Proceso realizado exitosamente!");
             request.setAttribute("stTipo", "success");
 
             request.getRequestDispatcher("PosiblesClientes.jsp").forward(request, response);

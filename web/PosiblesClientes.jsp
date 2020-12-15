@@ -65,7 +65,7 @@
         %>    
         <div class="container">
             <div class="card mx-auto mt-5">
-                <div class="card-header"> <b>CREAR POSIBLES CLIENTES</b> </div>
+                <div class="card-header"> <b>CREAR POSIBLE CLIENTE</b> </div>
                 <div class="card-body">
                     <form action="PosiblesClientesController" method="POST">
 

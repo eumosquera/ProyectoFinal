@@ -43,7 +43,6 @@ public final class PosiblesClientes_jsp extends org.apache.jasper.runtime.HttpJs
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("git ");
       out.write("\n");
       out.write("\n");
       out.write("\n");
