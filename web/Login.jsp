@@ -65,7 +65,7 @@
                                     <input class="form-check-input" type="checkbox" name="chkRecordar"> Recordar Contraseña</label>
                             </div>
                         </div>
-                        <input name="btnAceptar" type="submit" class="btn btn-primary btn-block" value="Aceptar" />
+                        <input name="btnAutenticar" type="submit" class="btn btn-primary btn-block" value="Aceptar" />
                     </form>
                     <div class="text-center">
                         <a class="d-block small mt-3" href="Registrar.jsp">Registrar cuenta</a>

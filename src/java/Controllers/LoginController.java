@@ -33,6 +33,31 @@ public class LoginController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
+        if(request.getParameter("btnAutenticar")!=null) {
+           btnAutenticar(request, response);
+
+        }else if(request.getParameter("btnRegistrar")!=null){
+            
+        }
+
+    }
+    public void btnRegistrar(HttpServletRequest request, 
+            HttpServletResponse response) throws ServletException, IOException{
+        try{
+            
+            
+            
+        }catch(Exception ex){
+            request.setAttribute("stMensage", ex.getMessage());
+            request.setAttribute("stTipo", "error");
+            
+            request.getRequestDispatcher("Registrar.jsp").forward(request, response);
+        }
+        
+    }
+
+    public void btnAutenticar(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
         try {
 
             String stMensaje = "";
@@ -67,7 +92,6 @@ public class LoginController extends HttpServlet {
             request.setAttribute("stError", ex.getMessage());
             request.getRequestDispatcher("Login.jsp").forward(request, response);
         }
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -5,11 +5,16 @@
  */
 package Bl;
 
-/**
- *
- * @author 57318
- */
+import java.sql.DriverManager;
+import java.sql.Connection;
 public class clsLogin {
+    Connection conn = null;
+    
+    public clsLogin(){
+        clsConexion obclsConexion = new clsConexion();
+        conn = obclsConexion.getConexion();
+        
+    }
 
     public boolean validarLogin(Models.ClsLogin obclsLogin) {
         try {
@@ -17,6 +22,14 @@ public class clsLogin {
                     && obclsLogin.getStPassword().equals("0147");
         } catch (Exception ex) {
             throw ex;
+        }
+    }
+    public String addUsuario(){
+        try{
+            
+        }catch(Exception ex){
+            throw ex;
+            
         }
     }
 }
